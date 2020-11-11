@@ -18,6 +18,58 @@
     <div class="container">
         <div class="row mx-auto">
             <!-- INCLUIR CÓDIGO PHP -->
+            <?php
+            echo "<table border-spacing='15px'>";
+                echo "<tr>";
+                    echo "<td><img src='./imgs/peliculas/1.jpg' width='275' height='500'></td>";
+                    echo "<td></td>";
+                    echo "<td></td>";
+                    echo "<td></td>";
+                    echo "<td></td>";
+                    echo "<td></td>";
+                    echo "<td></td>";
+                    echo "<td><img src='./imgs/peliculas/2.jpg' width='275' height='500'></td>";
+                    echo "<td></td>";
+                    echo "<td></td>";
+                    echo "<td></td>";
+                    echo "<td></td>";
+                    echo "<td></td>";
+                    echo "<td></td>";
+                    echo "<td><img src='./imgs/peliculas/3.jpg' width='275' height='500'></td>";
+                    echo "<td></td>";
+                    echo "<td></td>";
+                    echo "<td></td>";
+                    echo "<td></td>";
+                    echo "<td></td>";
+                    echo "<td></td>";
+                    echo "<td><img src='./imgs/peliculas/4.jpg' width='275' height='500'></td>";
+                echo "</tr>";
+                echo "<tr>";
+                    echo "<td><center><b>El Padrino</b></center></td>";
+                    echo "<td></td>";
+                    echo "<td></td>";
+                    echo "<td></td>";
+                    echo "<td></td>";
+                    echo "<td></td>";
+                    echo "<td></td>";
+                    echo "<td><center><b>El Padrino 2</b></center></td>";
+                    echo "<td></td>";
+                    echo "<td></td>";
+                    echo "<td></td>";
+                    echo "<td></td>";
+                    echo "<td></td>";
+                    echo "<td></td>";
+                    echo "<td><center><b>Senderos de gloria</b></center></td>";
+                    echo "<td></td>";
+                    echo "<td></td>";
+                    echo "<td></td>";
+                    echo "<td></td>";
+                    echo "<td></td>";
+                    echo "<td></td>";
+                    echo "<td><center><b>Primera Plana</b></center></td>";
+                echo "</tr>";
+           echo "</table>";
+            ?>
         </div>
     </div>
 </body>
