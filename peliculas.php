@@ -84,31 +84,32 @@
                     echo "<td><center><b>Primera Plana</b></center></td>";
                 echo "</tr>";
                 echo "<tr>";
-                    echo "<td><center><a href='./ peliculas_form.php' class='btn btn-dark' type='submit' style='background-color:DodgerBlue;color:white;'value='Editar'>Editar</a>&nbsp&nbsp<a href='./ peliculas_form.php' class='btn btn-dark' type='submit' style='background-color:rgb(255,0,0);color:white;' value='Borrar'>Borrar</a></center></td>";
+                    echo "<td><center><a href='./peliculas_form.php' class='btn btn-dark' type='submit' style='background-color:DodgerBlue;color:white;'value='Editar'>Editar</a>&nbsp&nbsp<a href='./peliculas_borrado.php' class='btn btn-dark' type='submit' style='background-color:rgb(255,0,0);color:white;' value='Borrar'>Borrar</a></center></td>";
                     echo "<td></td>";
                     echo "<td></td>";
                     echo "<td></td>";
                     echo "<td></td>";
                     echo "<td></td>";
                     echo "<td></td>";
-                    echo "<td><center><a href='./ peliculas_form.php' class='btn btn-dark' type='submit' style='background-color:DodgerBlue;color:white;'value='Editar'>Editar</a>&nbsp&nbsp<a href='./ peliculas_form.php' class='btn btn-dark' type='submit' style='background-color:rgb(255,0,0);color:white;' value='Borrar'>Borrar</a></center></td>";
+                    echo "<td><center><a href='./peliculas_form.php' class='btn btn-dark' type='submit' style='background-color:DodgerBlue;color:white;'value='Editar'>Editar</a>&nbsp&nbsp<a href='./peliculas_borrado.php' class='btn btn-dark' type='submit' style='background-color:rgb(255,0,0);color:white;' value='Borrar'>Borrar</a></center></td>";
                     echo "<td></td>";
                     echo "<td></td>";
                     echo "<td></td>";
                     echo "<td></td>";
                     echo "<td></td>";
                     echo "<td></td>";
-                    echo "<td><center><a href='./ peliculas_form.php' class='btn btn-dark' type='submit' style='background-color:DodgerBlue;color:white;'value='Editar'>Editar</a>&nbsp&nbsp<a href='./ peliculas_form.php' class='btn btn-dark' type='submit' style='background-color:rgb(255,0,0);color:white;' value='Borrar'>Borrar</a></center></td>";;
+                    echo "<td><center><a href='./peliculas_form.php' class='btn btn-dark' type='submit' style='background-color:DodgerBlue;color:white;'value='Editar'>Editar</a>&nbsp&nbsp<a href='./peliculas_borrado.php' class='btn btn-dark' type='submit' style='background-color:rgb(255,0,0);color:white;' value='Borrar'>Borrar</a></center></td>";
                     echo "<td></td>";
                     echo "<td></td>";
                     echo "<td></td>";
                     echo "<td></td>";
                     echo "<td></td>";
                     echo "<td></td>";
-                    echo "<td><center><a href='./ peliculas_form.php' class='btn btn-dark' type='submit' style='background-color:DodgerBlue;color:white;'value='Editar'>Editar</a>&nbsp&nbsp<a href='./ peliculas_form.php' class='btn btn-dark' type='submit' style='background-color:rgb(255,0,0);color:white;' value='Borrar'>Borrar</a></center></td>";;
+                    echo "<td><center><a href='./peliculas_form.php' class='btn btn-dark' type='submit' style='background-color:DodgerBlue;color:white;'value='Editar'>Editar</a>&nbsp&nbsp<a href='./peliculas_borrado.php' class='btn btn-dark' type='submit' style='background-color:rgb(255,0,0);color:white;' value='Borrar'>Borrar</a></center></td>";
                 echo "</tr>";
            echo "</table>";
             ?>
+
         </div>
     </div>
 </body>
