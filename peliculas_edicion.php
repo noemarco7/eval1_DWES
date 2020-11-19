@@ -15,7 +15,7 @@
 <div class="alert alert-success" role="alert">
             <!-- INCLUIR CÓDIGO PHP -->
             <?php
-
+            //funcion editar pelicula
             if (isset($_POST['btn_editar'])) {
                 //Se verifica los campos que se envian 
                 if (empty($_POST['nombre']) or empty($_POST['fecha']) or empty($_POST['duracion'])) {

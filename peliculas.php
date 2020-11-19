@@ -110,10 +110,12 @@
                     <div class="row mx-auto">
                         <!-- INCLUIR CÓDIGO PHP -->
                         <div class="form-row">
+                            <!--verificará si el archivo ya ha sido incluido-->
                             <?php require_once 'utils.php'; ?>
                             <?php
+                            //llama a la función getpeliculas(); del fichero utils.php para poder leer el fichero peliculas.csv
                             $peliculas = getPeliculas();
-
+                            //Si existe la pelicula entra en el foreach y añade su valor que es la imagen, luego el nombre y luego sus botones.
                             if (isset($peliculas[1])) {
                                 foreach ($peliculas as $key => $value) {
                                     ?>

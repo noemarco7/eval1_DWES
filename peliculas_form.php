@@ -9,16 +9,13 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Edición de películas</title>
 </head>
-
 <body>
-
     <div class="container">
         <h1>Edición de películas</h1>
 		 <!-- INCLUIR CÓDIGO PHP -->
          <?php
             //Se busca el archivo para buscar la función que se necesita
             require_once './utils.php';
-
             //Se verifica que exista el id de la pelicula...
             if (isset($_GET['id']) && $_GET['id'] != "") {
                 //Se asigna el valor nuevo a la id...
@@ -37,6 +34,7 @@
                     </center>
                 </div>
                 <div class="col col-md-6">
+                <!--FORMULARIO-->
                     <form method="post" action="peliculas_edicion.php">
                         <table>
                             <input type="hidden" name="id" value="<?php echo $datos_pelicula[0]; ?>">
