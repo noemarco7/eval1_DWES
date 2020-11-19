@@ -32,7 +32,7 @@
                     );
                     //Se coge los valores del archivo.csv
                     $aLineas = file("./bbdd/peliculas.csv");
-                    //Esta es la linea donde se ha de reemplzar
+                    //Esta es la linea donde se ha de reemplazar
                     $linea = $aLineas[$array_datos['id'] -1];
                     //Esta es la nueva linea
                     $new_linea = $array_datos['id'] . "," . $array_datos['titulo'] . "," . $array_datos['fecha'] . ","
@@ -48,15 +48,15 @@
                     //Cerramos el archvo.
                     fclose($file); 
                     //Retrocedemos a la pagina para ver los cambios
-                    header("Location: ../eval1_dwes/peliculas.php");
-                    //header("Location: ../eval1_dwes/peliculas_edicion.php");
-                    
+                    //header("Location: ../eval1_dwes/peliculas.php");    
+                    echo 'Los datos se han guardado con éxito';                
                 }
             } else {
                 header("Location: ../eval1_dwes/index.html");
             }
             ?>
-
+            <br>
+            <a href="index.html"  style='background-color:rgb(95, 191, 245);color:white;'>Volver al inicio </a>
 </body>
 
 </html>
