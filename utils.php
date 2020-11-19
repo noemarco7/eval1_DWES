@@ -27,7 +27,7 @@
 
     //funcion que lea un csv 
                 //Funcion lee el fichero
-                function leer_fichero($nombre)
+     /*           function leer_fichero($nombre)
                 {
                     $archivo = fopen($nombre, "r"); //abrimos el archivo
                     if ($archivo != false) {
@@ -73,7 +73,7 @@
     function obtener_actores(){
 
     }
-
+*/
 
 
 
