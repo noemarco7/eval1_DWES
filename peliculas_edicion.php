@@ -14,6 +14,48 @@
 <body>
 <div class="alert alert-success" role="alert">
             <!-- INCLUIR CÓDIGO PHP -->
+            <?php
+
+            if (isset($_POST['btn_editar'])) {
+                //Se verifica los campos que se envian 
+                if (empty($_POST['nombre']) or empty($_POST['fecha']) or empty($_POST['duracion'])) {
+                    //Si los campos estan vacios se vuelve a la pagina index
+                    header("Location: ../eval1_dwes/index.html");
+                } else {
+                    //Si no se recoge los datos del formulario del array 
+                    $array_datos = array(
+                        'id' => $_POST['id'],
+                        'titulo' => $_POST['nombre'],
+                        'fecha' => $_POST['fecha'],
+                        'duracion' => $_POST['duracion'],   
+                        'foto' => $_POST['foto'],
+                    );
+                    //Se coge los valores del archivo.csv
+                    $aLineas = file("./bbdd/peliculas.csv");
+                    //Esta es la linea donde se ha de reemplzar
+                    $linea = $aLineas[$array_datos['id'] -1];
+                    //Esta es la nueva linea
+                    $new_linea = $array_datos['id'] . "," . $array_datos['titulo'] . "," . $array_datos['fecha'] . ","
+                            . $array_datos['duracion'] . "," . $array_datos['foto']."\n";
+                    //fichero donde esta el contenido 
+                    $file = file_get_contents('./bbdd/peliculas.csv');
+                    //donde se reemplaza 
+                    $resultado = str_replace($linea, $new_linea, $file); 
+                    //Abrimos el archivo en modo escritura
+                    $file = fopen("./bbdd/peliculas.csv", "w"); 
+                    //Reescribimos el archivo con los nuevos datos
+                    fwrite($file, $resultado); 
+                    //Cerramos el archvo.
+                    fclose($file); 
+                    //Retrocedemos a la pagina para ver los cambios
+                    header("Location: ../eval1_dwes/peliculas.php");
+                    //header("Location: ../eval1_dwes/peliculas_edicion.php");
+                    
+                }
+            } else {
+                header("Location: ../eval1_dwes/index.html");
+            }
+            ?>
 
 </body>
 

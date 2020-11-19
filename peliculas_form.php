@@ -37,7 +37,7 @@
                     </center>
                 </div>
                 <div class="col col-md-6">
-                    <form method="post" action="function_editar.php">
+                    <form method="post" action="peliculas_edicion.php">
                         <table>
                             <input type="hidden" name="id" value="<?php echo $datos_pelicula[0]; ?>">
                             <input type="hidden" name="foto" value="<?php echo $datos_pelicula[0]; ?>">
@@ -52,7 +52,7 @@
                             <tr>
                                 <td><label>Duración:</label></td>
                                 <td>
-                                    <input class="form form-control" type="text" name="vistas" value="<?php echo $datos_pelicula[3]; ?>">
+                                    <input class="form form-control" type="text" name="duracion" value="<?php echo $datos_pelicula[3]; ?>">
                                 </td>
                             </tr>
                             <tr>
