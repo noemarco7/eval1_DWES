@@ -24,6 +24,42 @@
     }
 
 
+    //Función para que lea el csv de directores.csv
+    function getDirectores() {
+        //Ruta para abrir el fichero
+        $file = fopen('./bbdd/directores.csv', 'r');
+        //contador
+        $cont = 1;
+        //mientras
+        while (($line = fgetcsv($file)) !== FALSE) {
+            //$line is an array of the csv elements
+            $array_directores[$cont] = $line;
+            $cont++;
+        }
+        //cerrar el archivo
+        fclose($file);
+        return $array_directores;
+    }
+
+
+    //Función para que lea el csv de directores.csv
+    function getActores() {
+        //Ruta para abrir el fichero
+        $file = fopen('./bbdd/actores.csv', 'r');
+        //contador
+        $cont = 1;
+        //mientras
+        while (($line = fgetcsv($file)) !== FALSE) {
+            //$line is an array of the csv elements
+            $array_actores[$cont] = $line;
+            $cont++;
+        }
+        //cerrar el archivo
+        fclose($file);
+        return $array_actores;
+    }
+
+
 
     //funcion que lea un csv 
                 //Funcion lee el fichero
