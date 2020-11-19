@@ -32,84 +32,105 @@
     </div>
     <div class="container">
         <div class="row mx-auto">
-            <!-- INCLUIR CÓDIGO PHP -->
-            <?php
-            echo "<table border-spacing='15px'>";
-                echo "<tr>";
-                    echo "<td><a href='https://www.filmaffinity.com/es/film809297.html' title='El Padrino'><img alt='imagen html pelicula' src='./imgs/peliculas/1.jpg' width='275' height='500' border='5' style='border:2px solid #337AB7'></a></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td><a href='https://www.filmaffinity.com/es/film730528.html' title='El Padrino 2'><img alt='imagen html pelicula' src='./imgs/peliculas/2.jpg' width='275' height='500'border='5' style='border:2px solid #337AB7'></a></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td><a href='https://www.filmaffinity.com/es/film448956.html' title='El Senderos de gloria'><img src='./imgs/peliculas/3.jpg' width='275' height='500'border='5' style='border:2px solid #337AB7'></a></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td><a href='https://www.filmaffinity.com/es/film159596.html' title='Primera Plana'><img src='./imgs/peliculas/4.jpg' width='275' height='500'border='5' style='border:2px solid #337AB7' ></a></td>";
-                echo "</tr>";
-                echo "<tr>";
-                    echo "<td><center><b>El Padrino</b></center></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td><center><b>El Padrino 2</b></center></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td><center><b>Senderos de gloria</b></center></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td><center><b>Primera Plana</b></center></td>";
-                echo "</tr>";
-                echo "<tr>";
-                    echo "<td><center><a href='./peliculas_form.php' class='btn btn-dark' type='submit' style='background-color:DodgerBlue;color:white;'value='Editar'>Editar</a>&nbsp&nbsp<a href='./peliculas_borrado.php' class='btn btn-dark' type='submit' style='background-color:rgb(255,0,0);color:white;' value='Borrar'>Borrar</a></center></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td><center><a href='./peliculas_form.php' class='btn btn-dark' type='submit' style='background-color:DodgerBlue;color:white;'value='Editar'>Editar</a>&nbsp&nbsp<a href='./peliculas_borrado.php' class='btn btn-dark' type='submit' style='background-color:rgb(255,0,0);color:white;' value='Borrar'>Borrar</a></center></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td><center><a href='./peliculas_form.php' class='btn btn-dark' type='submit' style='background-color:DodgerBlue;color:white;'value='Editar'>Editar</a>&nbsp&nbsp<a href='./peliculas_borrado.php' class='btn btn-dark' type='submit' style='background-color:rgb(255,0,0);color:white;' value='Borrar'>Borrar</a></center></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td></td>";
-                    echo "<td><center><a href='./peliculas_form.php' class='btn btn-dark' type='submit' style='background-color:DodgerBlue;color:white;'value='Editar'>Editar</a>&nbsp&nbsp<a href='./peliculas_borrado.php' class='btn btn-dark' type='submit' style='background-color:rgb(255,0,0);color:white;' value='Borrar'>Borrar</a></center></td>";
-                echo "</tr>";
-           echo "</table>";
-            ?>
+            <!--
+            <table border-spacing='15px'>
+                    <tr>
+                        <td><a href='https://www.filmaffinity.com/es/film809297.html' id='1' title='El Padrino'><img alt='imagen html pelicula' src='./imgs/peliculas/1.jpg' width='275' height='500' border='5' style='border:2px solid #337AB7'></a></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href='https://www.filmaffinity.com/es/film730528.html' id='2' title='El Padrino 2'><img alt='imagen html pelicula' src='./imgs/peliculas/2.jpg' width='275' height='500'border='5' style='border:2px solid #337AB7'></a></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href='https://www.filmaffinity.com/es/film448956.html' id='3' title='El Senderos de gloria'><img src='./imgs/peliculas/3.jpg' width='275' height='500'border='5' style='border:2px solid #337AB7'></a></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href='https://www.filmaffinity.com/es/film159596.html' id='4' title='Primera Plana'><img src='./imgs/peliculas/4.jpg' width='275' height='500' border='5' style='border:2px solid #337AB7' ></a></td> 
+                    </tr>
+                    <tr>
+                        <td><center><b>El Padrino</b></center></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><center><b>El Padrino 2</b></center></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><center><b>Senderos de gloria</b></center></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><center><b>Primera Plana</b></center></td>
+                    </tr> 
+                    <tr>
+                        <td><center><a href='./peliculas_form.php' class='btn btn-dark' type='submit' style='background-color:DodgerBlue;color:white;'value='Editar'>Editar</a>&nbsp&nbsp<a href='./peliculas_borrado.php' class='btn btn-dark' type='submit' style='background-color:rgb(255,0,0);color:white;' value='Borrar'>Borrar</a></center></td>
+                        <td></td>  
+                        <td></td>  
+                        <td></td>  
+                        <td></td>  
+                        <td></td>  
+                        <td></td>  
+                        <td><center><a href='./peliculas_form.php' class='btn btn-dark' type='submit' style='background-color:DodgerBlue;color:white;'value='Editar'>Editar</a>&nbsp&nbsp<a href='./peliculas_borrado.php' class='btn btn-dark' type='submit' style='background-color:rgb(255,0,0);color:white;' value='Borrar'>Borrar</a></center></td>  
+                        <td></td>  
+                        <td></td>  
+                        <td></td>  
+                        <td></td>  
+                        <td></td>  
+                        <td></td>  
+                        <td><center><a href='./peliculas_form.php' class='btn btn-dark' type='submit' style='background-color:DodgerBlue;color:white;'value='Editar'>Editar</a>&nbsp&nbsp<a href='./peliculas_borrado.php' class='btn btn-dark' type='submit' style='background-color:rgb(255,0,0);color:white;' value='Borrar'>Borrar</a></center></td>  
+                        <td></td>  
+                        <td></td>  
+                        <td></td>  
+                        <td></td>  
+                        <td></td>  
+                        <td></td>  
+                        <td><center><a href='./peliculas_form.php' class='btn btn-dark' type='submit' style='background-color:DodgerBlue;color:white;'value='Editar'>Editar</a>&nbsp&nbsp<a href='./peliculas_borrado.php' class='btn btn-dark' type='submit' style='background-color:rgb(255,0,0);color:white;' value='Borrar'>Borrar</a></center></td>  
+                    </tr> 
+                </table>--> 
+                    <div class="row mx-auto">
+                        <!-- INCLUIR CÓDIGO PHP -->
+                        <div class="form-row">
+                            <?php require_once 'utils.php'; ?>
+                            <?php
+                            $peliculas = getPeliculas();
 
+                            if (isset($peliculas[1])) {
+                                foreach ($peliculas as $key => $value) {
+                                    ?>
+                                    <div class="col col-md-3">
+                                        <center>
+                                            <img alt='imagen html pelicula' src='./imgs/peliculas/<?php echo $peliculas[$key][0].".jpg" ?>' width='275' height='500'>
+                                            <b><?php echo $peliculas[$key][1]; ?></b><br>
+                                            <a href="<?php echo '../clases/editar.php?id=' . $peliculas[$key][0]; ?>" class='btn btn-dark' style='background-color:DodgerBlue;color:white;'value='Editar'>Editar</a>
+                                            <a href="<?php// echo '../clases/eliminar.php?id=' . $peliculas[$key][0]; ?>" class='btn btn-dark' style='background-color:rgb(255,0,0);color:white;' value='Borrar'>Borrar</a>
+                                        </center>
+                                    </div>
+                                    <?php
+                                }
+                            }
+                            ?>
+                        </div>
+                    </div>
         </div>
     </div>
 </body>

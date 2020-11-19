@@ -11,10 +11,11 @@
 </head>
 
 <body>
+
     <div class="container">
         <h1>Edición de películas</h1>
 		 <!-- INCLUIR CÓDIGO PHP -->
-
+         
 
     </div>
 
