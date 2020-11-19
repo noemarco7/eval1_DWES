@@ -121,8 +121,8 @@
                                         <center>
                                             <img alt='imagen html pelicula' src='./imgs/peliculas/<?php echo $peliculas[$key][0].".jpg" ?>' width='275' height='500'>
                                             <b><?php echo $peliculas[$key][1]; ?></b><br>
-                                            <a href="<?php echo '../clases/editar.php?id=' . $peliculas[$key][0]; ?>" class='btn btn-dark' style='background-color:DodgerBlue;color:white;'value='Editar'>Editar</a>
-                                            <a href="<?php// echo '../clases/eliminar.php?id=' . $peliculas[$key][0]; ?>" class='btn btn-dark' style='background-color:rgb(255,0,0);color:white;' value='Borrar'>Borrar</a>
+                                            <a href="<?php echo 'peliculas_form.php?id=' . $peliculas[$key][0]; ?>" class='btn btn-dark' style='background-color:DodgerBlue;color:white;'value='Editar'>Editar</a>
+                                            <a href="<?php// echo 'peliculas_borrado.php?id=' . $peliculas[$key][0]; ?>" class='btn btn-dark' style='background-color:rgb(255,0,0);color:white;' value='Borrar'>Borrar</a>
                                         </center>
                                     </div>
                                     <?php
