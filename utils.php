@@ -25,7 +25,7 @@
 
 
     //Función para que lea el csv de directores.csv
-    function getDirectores() {
+    function getDirector() {
         //Ruta para abrir el fichero
         $file = fopen('./bbdd/directores.csv', 'r');
         //contador
@@ -41,9 +41,15 @@
         return $array_directores;
     }
 
+    //Función para obtener los detalles de cada director a traves de su ID
+    function detailDirector($id_director){
+        $director = getDirector();
+        return $director[$id_director];
+    }
+
 
     //Función para que lea el csv de directores.csv
-    function getActores() {
+    function getActor() {
         //Ruta para abrir el fichero
         $file = fopen('./bbdd/actores.csv', 'r');
         //contador
@@ -59,10 +65,14 @@
         return $array_actores;
     }
 
+    //Función para obtener los detalles de cada director a traves de su ID
+    function detailActor($id_director){
+        $actor = getActor();
+        return $actor[$id_director];
+    }
 
 
-
-    /*funcion eliminar peliculas
+    /*funcion que se encargara de borrar la pelicula seleccionada   ---- FUNCION INDIVIDUAL FUNCTION BORRAR
     function eliminar_peliculas(){
         //Inicializamos la sesion para mostrar mensajes 
             session_start();
@@ -164,10 +174,7 @@
     
 
     
-    //funcion que se encargara de borrar la pelicula seleccionada
-    function borrar_pelicula(){
-
-    }
+    
 
 
 

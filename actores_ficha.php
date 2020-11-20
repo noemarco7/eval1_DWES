@@ -17,6 +17,18 @@
     </div>
     <div class="container">
 	<!-- INCLUIR CÓDIGO PHP -->
+    <?php require_once 'utils.php'; ?>
+    <?php                
+            //Se verifica que exista el id de la pelicula.
+            if (isset($_GET['id']) && $_GET['id'] != "") {
+                //Se asigna el valor nuevo a la id.
+                $id_pelicula = $_GET['id'];
+                //Se obtiene los datos a travez de la función 
+                $datos_peliculaA = detailPelicula($id_pelicula);
+            } else {
+                header("Location: http://localhost/eval1_dwes/peliculas.php");
+            }
+    ?>
 
 
 
@@ -24,10 +36,25 @@
             <div class="form-row">
                 <div class="col col-md-6">
                 <!--FORMULARIO-->
+                           
                     <form method="post" action="peliculas.php">
                         <table>
                             <tr>
-                                <td><b><label>Nombre:</label></b></td>
+                                <td><b><label>Titulo de pélicula:</label></b></td>
+                                <td><input class="form form-control" type="text" name="nombre" value="<?php echo $datos_peliculaA[1]; ?>"> </td>
+                            </tr>
+                            <tr>
+                                <td><b><label>Fecha de estreno:</label></b></td>
+                                <td><input class="form form-control" type="text" name="fecha" value="<?php echo $datos_peliculaA[2]; ?>"> </td>
+                            </tr>
+                            <tr>
+                                <td><b><label>Duración:</label></b></td>
+                                <td>
+                                    <input class="form form-control" type="text" name="duracion" value="<?php echo $datos_peliculaA[3]; ?>">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b><label>Nombres de actores:</label></b></td>
                                 <td><input class="form form-control" type="text" name="nombre" value="<?php //echo $datos_pelicula[1]; ?>"> </td>
                             </tr>
                             <tr>

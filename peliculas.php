@@ -126,6 +126,8 @@
                             <?php
                             //llama a la función getpeliculas(); del fichero utils.php para poder leer el fichero peliculas.csv
                             $peliculas = getPeliculas();
+                            $director = getDirector();
+                            $actor = getActor();
                             //Si existe la pelicula entra en el foreach y añade su valor que es la imagen, luego el nombre y luego sus botones.
                             if (isset($peliculas[1])) {
                                 foreach ($peliculas as $key => $value) {
@@ -136,6 +138,8 @@
                                             <b><?php echo $peliculas[$key][1]; ?></b><br>
                                             <a href="<?php echo 'peliculas_form.php?id=' . $peliculas[$key][0]; ?>" class='btn btn-dark' style='background-color:DodgerBlue;color:white;'value='Editar'>Editar</a>
                                             <a href="<?php echo 'function_borrar.php?id=' . $peliculas[$key][0]; ?>" class='btn btn-dark' style='background-color:rgb(255,0,0);color:white;' value='Borrar'>Borrar</a>
+                                            <a href="<?php echo 'actores_ficha.php?id=' . $peliculas[$key][0]; ?>" class='btn btn-dark' style='background-color:DodgerBlue;color:white;' value='Actores'>Actores</a>
+                                            <a href="<?php echo 'directores_ficha.php?id=' . $peliculas[$key][0]; ?>" class='btn btn-dark' style='background-color:DodgerBlue;color:white;' value='Director'>Director</a>
                                         </center>
                                     </div>
                                     <?php

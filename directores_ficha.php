@@ -13,11 +13,22 @@
 
 <body>
     <div class="alert alert-secondary d-flex">
-        <a href="./peliculas_ficha.php" class="btn btn-dark">Listar Películas</a>&nbsp;&nbsp;
+        <a href="./peliculas.php" class="btn btn-dark">Películas</a>&nbsp;&nbsp;
     </div>
     <div class="container">
 	<!-- INCLUIR CÓDIGO PHP -->
-
+    <?php require_once 'utils.php'; ?>
+    <?php                
+            //Se verifica que exista el id de la pelicula.
+            if (isset($_GET['id']) && $_GET['id'] != "") {
+                //Se asigna el valor nuevo a la id.
+                $id_pelicula = $_GET['id'];
+                //Se obtiene los datos a travez de la función 
+                $datos_peliculaD = detailPelicula($id_pelicula);
+            } else {
+                header("Location: http://localhost/eval1_dwes/peliculas.php");
+            }
+    ?>
 
 
     <div class="row mx-auto">
@@ -25,22 +36,27 @@
                 <div class="col col-md-6">
                 <!--FORMULARIO-->
                     <form method="post" action="peliculas.php">
-                        <table>
-                            <tr>
-                                <td><b><label>Nombre:</label></b></td>
-                                <td><input class="form form-control" type="text" name="nombre" value="<?php //echo $datos_pelicula[1]; ?>"> </td>
-                            </tr>
-                            <tr>
-                                <td><b><label>Año:</label></b></td>
-                                <td><input class="form form-control" type="text" name="fecha" value="<?php //echo $datos_pelicula[2]; ?>"> </td>
-                            </tr>
-                            <tr>
-                                <td><b><label>País:</label></b></td>
-                                <td>
-                                    <input class="form form-control" type="text" name="duracion" value="<?php //echo $datos_pelicula[3]; ?>">
-                                </td>
-                            </tr>
-                        </table>
+                       <fieldset>
+                            
+                                <b><label>Titulo de la Pélicula:</label></b>
+                                <input class="form form-control" type="text" name="titulo" value="<?php echo $datos_peliculaD[1]; ?>"> 
+                            
+                                <b><label>Fecha de Estreno:</label></b>
+                                <input class="form form-control" type="text" name="fecha" value="<?php echo $datos_peliculaD[2]; ?>"> 
+                            
+                                <b><label>Duración de la pélicula:</label></b>
+                                <input class="form form-control" type="text" name="duracion" value="<?php echo $datos_peliculaD[3]; ?>"> 
+                            
+                                <b><label>Nombre de director:</label></b>
+                                <input class="form form-control" type="text" name="nombre" value="<?php //echo $datos_pelicula[1]; ?>"> 
+                            
+                                <b><label>Año de nacimiento:</label></b>
+                                <input class="form form-control" type="text" name="anyo" value="<?php //echo $datos_pelicula[2]; ?>"> 
+                            
+                                <b><label>País:</label></b>
+                                <input class="form form-control" type="text" name="pais" value="<?php //echo $datos_pelicula[3]; ?>">
+                           
+                       </fieldset>
                     </form>
                 </div>
             </div>
