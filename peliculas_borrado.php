@@ -1,3 +1,5 @@
+<?php session_start();?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,7 +13,17 @@
 </head>
 <body>
 <div class="alert alert-success" role="alert">
-            <!-- INCLUIR CÓDIGO PHP -->
+<?php
+        //Se verifica si existe un mensaje para el usuario
+        if (isset($_SESSION['mensaje'])) {
+            //Se muestra el mensaje por pantalla
+            echo '<div class="alert alert-success" role="alert">' . $_SESSION['mensaje'] . '</div>';
+        }
+?>
+
+ <br>
+     <a href="index.html"  style='background-color:rgb(95, 191, 245);color:white;'>Volver al inicio </a>
+
 
     
 </body>

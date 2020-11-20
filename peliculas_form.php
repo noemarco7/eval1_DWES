@@ -16,9 +16,9 @@
          <?php
             //Se busca el archivo para buscar la función que se necesita
             require_once './utils.php';
-            //Se verifica que exista el id de la pelicula...
+            //Se verifica que exista el id de la pelicula.
             if (isset($_GET['id']) && $_GET['id'] != "") {
-                //Se asigna el valor nuevo a la id...
+                //Se asigna el valor nuevo a la id.
                 $id_pelicula = $_GET['id'];
                 //Se obtiene los datos a travez de la función 
                 $datos_pelicula = detailPelicula($id_pelicula);
