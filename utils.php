@@ -72,6 +72,32 @@
     }
 
 
+
+   
+        //Arrays asociativos con toda la información
+        $pelis = array(
+                         array( "id" =>"1","nombre" =>"Francis Ford Coppola","anyo" =>"1939","pais" => "Estados Unidos"), 
+                         array( "id" =>"1","nombre" =>"Marlon Brandon, Al Pacino,  Robert Duvall, James Cann, Diane Keaton","anyo" =>"1924, 1940, 1931, 1940, 1946","pais" => "Estados Unidos, Estados Unidos, Estados Unidos, Estados Unidos, Estados Unidos"),
+                         array( "id" =>"2","nombre" =>"Francis Ford Coppola","anyo" =>"1939","pais" => "Estados Unidos"), 
+                         array( "id" =>"2","nombre" =>"Marlon Brandon, Al Pacino,  Robert Duvall, James Cann, Diane Keaton, Robert de Niro ","anyo" =>"1924, 1940, 1931, 1940, 1946, 1943","pais" => "Estados Unidos, Estados Unidos, Estados Unidos, Estados Unidos, Estados Unidos, Estados Unidos"),
+                         array( "id" =>"3","nombre" =>"Stanley Kubrick","anyo" =>"1928","pais" => "Estados Unidos"), 
+                         array( "id" =>"3","nombre" =>"Kirk Douglas, Ralph Meeker,  Adolphe Menjou","anyo" =>"1916, 1920, 1890","pais" => "Estados Unidos, Estados Unidos, Estados Unidos"),
+                         array( "id" =>"4","nombre" =>"Billy Wilder","anyo" =>"1906","pais" => "Polonia"), 
+                         array( "id" =>"4","nombre" =>"Jack Lemmon, Walter Matthau,  Susan Sarandon","anyo" =>"1925, 1920, 1931, 1946","pais" => "Estados Unidos, Estados Unidos, Estados Unidos"));
+    
+        //Recorrer el array                         
+                foreach($pelis as $pelis => $detalles){
+                    echo "<h1> $pelis </h1>"; 
+                    foreach($detalles as $indice => $valor) {
+                        echo "<p> $indice:$valor </p>";
+                    }
+                }
+
+
+    
+
+
+
     /*funcion que se encargara de borrar la pelicula seleccionada   ---- FUNCION INDIVIDUAL FUNCTION BORRAR
     function eliminar_peliculas(){
         //Inicializamos la sesion para mostrar mensajes 

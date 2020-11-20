@@ -28,6 +28,17 @@
             } else {
                 header("Location: http://localhost/eval1_dwes/peliculas.php");
             }
+
+
+            //Se verifica que exista el id de directores.
+            if (isset($_GET['id']) && $_GET['id'] != "") {
+                //Se asigna el valor nuevo a la id.
+                $id_director = $_GET['id'];
+                //Se obtiene los datos a travez de la función 
+                $datos_director = detailDirector($id_director);
+            } else {
+                header("Location: http://localhost/eval1_dwes/peliculas.php");
+            } 
     ?>
 
 
@@ -48,13 +59,13 @@
                                 <input class="form form-control" type="text" name="duracion" value="<?php echo $datos_peliculaD[3]; ?>"> 
                             
                                 <b><label>Nombre de director:</label></b>
-                                <input class="form form-control" type="text" name="nombre" value="<?php //echo $datos_pelicula[1]; ?>"> 
+                                <input class="form form-control" type="text" name="nombre" value="<?php echo $datos_director[1]; ?>"> 
                             
                                 <b><label>Año de nacimiento:</label></b>
-                                <input class="form form-control" type="text" name="anyo" value="<?php //echo $datos_pelicula[2]; ?>"> 
+                                <input class="form form-control" type="text" name="anyo" value="<?php echo $datos_director[2]; ?>"> 
                             
                                 <b><label>País:</label></b>
-                                <input class="form form-control" type="text" name="pais" value="<?php //echo $datos_pelicula[3]; ?>">
+                                <input class="form form-control" type="text" name="pais" value="<?php echo $datos_director[3]; ?>">
                            
                        </fieldset>
                     </form>

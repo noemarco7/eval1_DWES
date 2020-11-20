@@ -28,7 +28,17 @@
             } else {
                 header("Location: http://localhost/eval1_dwes/peliculas.php");
             }
-    ?>
+            
+            //Se verifica que exista el id de la pelicula.
+            if (isset($_GET['id']) && $_GET['id'] != "") {
+                //Se asigna el valor nuevo a la id.
+                $id_actores = $_GET['id'];
+                //Se obtiene los datos a travez de la función 
+                $datos_actores = detailActor($id_actores);
+            } else {
+                header("Location: http://localhost/eval1_dwes/peliculas.php");
+            }
+ ?>
 
 
 
@@ -55,16 +65,16 @@
                             </tr>
                             <tr>
                                 <td><b><label>Nombres de actores:</label></b></td>
-                                <td><input class="form form-control" type="text" name="nombre" value="<?php //echo $datos_pelicula[1]; ?>"> </td>
+                                <td><input class="form form-control" type="text" name="nombre" value="<?php echo $datos_actores[1]; ?>"> </td>
                             </tr>
                             <tr>
                                 <td><b><label>Año:</label></b></td>
-                                <td><input class="form form-control" type="text" name="fecha" value="<?php //echo $datos_pelicula[2]; ?>"> </td>
+                                <td><input class="form form-control" type="text" name="fecha" value="<?php echo $datos_actores[2]; ?>"> </td>
                             </tr>
                             <tr>
                                 <td><b><label>País:</label></b></td>
                                 <td>
-                                    <input class="form form-control" type="text" name="duracion" value="<?php //echo $datos_pelicula[3]; ?>">
+                                    <input class="form form-control" type="text" name="duracion" value="<?php echo $datos_actores[3]; ?>">
                                 </td>
                             </tr>
                         </table>
