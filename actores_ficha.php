@@ -13,7 +13,7 @@
 
 <body>
     <div class="alert alert-secondary d-flex">
-        <a href="./peliculas_ficha.php" class="btn btn-dark">Listar Películas</a>&nbsp;&nbsp;
+        <a href="./peliculas.php" class="btn btn-dark">Listar Películas</a>&nbsp;&nbsp;
     </div>
     <div class="container">
 	<!-- INCLUIR CÓDIGO PHP -->

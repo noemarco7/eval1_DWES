@@ -73,8 +73,8 @@
 
 
 
-   
-        //Arrays asociativos con toda la información
+  /* 
+    //Arrays asociativos con toda la información
         $pelis = array(
                          array( "id" =>"1","nombre" =>"Francis Ford Coppola","anyo" =>"1939","pais" => "Estados Unidos"), 
                          array( "id" =>"1","nombre" =>"Marlon Brandon, Al Pacino,  Robert Duvall, James Cann, Diane Keaton","anyo" =>"1924, 1940, 1931, 1940, 1946","pais" => "Estados Unidos, Estados Unidos, Estados Unidos, Estados Unidos, Estados Unidos"),
@@ -92,7 +92,7 @@
                         echo "<p> $indice:$valor </p>";
                     }
                 }
-
+*/
 
     
 
