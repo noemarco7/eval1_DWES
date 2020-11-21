@@ -46,7 +46,7 @@
             <div class="form-row">
                 <div class="col col-md-6">
                 <!--FORMULARIO-->
-                           
+                
                     <form method="post" action="peliculas.php">
                         <table>
                             <tr>

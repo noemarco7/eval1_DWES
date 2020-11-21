@@ -24,6 +24,12 @@
     }
 
 
+
+
+
+
+
+    //Una función que obtenga los directores de una película
     //Función para que lea el csv de directores.csv
     function getDirector() {
         //Ruta para abrir el fichero
@@ -48,6 +54,13 @@
     }
 
 
+
+
+
+
+
+
+    //Una función que obtenga los actores de una película
     //Función para que lea el csv de directores.csv
     function getActor() {
         //Ruta para abrir el fichero
@@ -72,8 +85,55 @@
     }
 
 
+    //Una función que obtenga datos de pelicula_actor de una película
+    function get_peliActor() {
+        //Ruta para abrir el fichero
+        $file = fopen('./bbdd/pelicula_actor.csv', 'r');
+        //contador
+        $cont = 1;
+        //mientras
+        while (($line = fgetcsv($file)) !== FALSE) {
+            //$line is an array of the csv elements
+            $array_actores[$cont] = $line;
+            $cont++;
+        }
+        //cerrar el archivo
+        fclose($file);
+        return $array_actores;
+    }
 
-  /* 
+    //Función para obtener los detalles de cada director a traves de su ID
+    function detailPeliActor($id_peliactor){
+        $peliactor = get_peliActor();
+        return $peliactor[$id_peliactor];
+    }
+  
+    
+
+     //Una función que obtenga datos de pelicula_actor de una película
+    function get_pelidirector() {
+        //Ruta para abrir el fichero
+        $file = fopen('./bbdd/pelicula_director.csv', 'r');
+        //contador
+        $cont = 1;
+        //mientras
+        while (($line = fgetcsv($file)) !== FALSE) {
+            //$line is an array of the csv elements
+            $array_actores[$cont] = $line;
+            $cont++;
+        }
+        //cerrar el archivo
+        fclose($file);
+        return $array_actores;
+    }
+
+    //Función para obtener los detalles de cada director a traves de su ID
+    function detailPelidirector($id_pelidirector){
+        $pelidirector = get_pelidirector();
+        return $peliactor[$id_pelidirector];
+    }
+  
+
     //Arrays asociativos con toda la información
         $pelis = array(
                          array( "id" =>"1","nombre" =>"Francis Ford Coppola","anyo" =>"1939","pais" => "Estados Unidos"), 
@@ -85,7 +145,7 @@
                          array( "id" =>"4","nombre" =>"Billy Wilder","anyo" =>"1906","pais" => "Polonia"), 
                          array( "id" =>"4","nombre" =>"Jack Lemmon, Walter Matthau,  Susan Sarandon","anyo" =>"1925, 1920, 1931, 1946","pais" => "Estados Unidos, Estados Unidos, Estados Unidos"));
     
-        //Recorrer el array                         
+ /*       //Recorrer el array                         
                 foreach($pelis as $pelis => $detalles){
                     echo "<h1> $pelis </h1>"; 
                     foreach($detalles as $indice => $valor) {
@@ -95,6 +155,8 @@
 */
 
     
+
+
 
 
 
@@ -197,28 +259,8 @@
 
     //función guarde los datos de una película editada en el fichero peliculas.csv,teniendo en cuanta que no se pueden borrar el resto de datos   
     
-    
-
-    
-    
-
-
-
-    //Una función que obtenga los directores de una película
-    function obtener_directores(){
-
-    }
-
-
-
-    //Una función que obtenga los actores de una película
-    function obtener_actores(){
-
-    }
+       
 */
-
-
-
 
 
 ?>

@@ -13,11 +13,12 @@
 
 <body>
     <div class="alert alert-secondary d-flex">
-        <a href="./peliculas_ficha.php" class="btn btn-dark">Listar Películas</a>&nbsp;&nbsp;
+        <a href="./peliculas.php" class="btn btn-dark">Listar Películas</a>&nbsp;&nbsp;
     </div>
     <div class="container">
        <!-- INCLUIR CÓDIGO PHP -->
         <?php
+        /*
             //Se busca el archivo para buscar la función que se necesita
             require_once './utils.php';
             //Se verifica que exista el id de la pelicula.
@@ -29,12 +30,39 @@
             } else {
                 header("Location: http://localhost/eval1_dwes/peliculas.php");
             }
-        ?>
+            */
+            require_once 'utils.php';
 
+                $peliculas = getPeliculas();
+                echo '<p><b>Array de peliculas:</b></p>';
+                print_r($peliculas);
+                echo '<br>';
+                
+                $director = getDirector();
+                echo '<p><b>Array de Directores:</b></p>';
+                print_r($director);
+                echo '<br>';
+
+                $actor = getActor();
+                echo '<p><b>Array de Actores:</b></p>';
+                print_r($actor);    
+                echo '<br>';
+                
+                $peliactor = get_peliActor();
+                echo '<p><b>Array de pelicula_actor:</b></p>';
+                print_r($peliactor); 
+                echo '<br>';
+                
+                $pelidirector = get_pelidirector();
+                echo '<p><b>Array de pelicula_actor:</b></p>';
+                print_r($pelidirector); 
+
+        ?>
+        <!--
         <div class="row mx-auto">
             <div class="form-row">
                 <div class="col col-md-6">
-                <!--FORMULARIO-->
+                
                     <form method="post" action="peliculas.php">
                         <table>
                             <tr>
@@ -67,7 +95,7 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </div>-->
         
     </div>
 </body>

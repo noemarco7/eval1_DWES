@@ -39,6 +39,10 @@
             } else {
                 header("Location: http://localhost/eval1_dwes/peliculas.php");
             } 
+
+            
+           // print_r($pelis);
+
     ?>
 
 
