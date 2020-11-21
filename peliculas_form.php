@@ -23,25 +23,29 @@
                 //Se obtiene los datos a travez de la función 
                 $datos_pelicula = detailPelicula($id_pelicula);
             } else {
+                //Vuelve a peliculas.php
                 header("Location: http://localhost/eval1_dwes/peliculas.php");
             }
         ?>
         <div class="row mx-auto">
             <div class="form-row">
                 <div class="col col-md-6">
+                <!-- Pongo la imagen de la pelicula que se edita-->
                     <center>
                         <img alt='imagen html pelicula' src='./imgs/peliculas/<?php echo $datos_pelicula[0].".jpg"; ?>' width="50%">
                     </center>
                 </div>
                 <div class="col col-md-6">
                 <!--FORMULARIO-->
+                    <!--utilizo el metodo post y va a la página peliculas_edicion.php -->
                     <form method="post" action="peliculas_edicion.php">
+                    <!--Creo el formulario en forma de tabla -->
                         <table>
                             <input type="hidden" name="id" value="<?php echo $datos_pelicula[0]; ?>">
                             <input type="hidden" name="foto" value="<?php echo $datos_pelicula[0]; ?>">
                             <tr>
-                                <td><label>Titulo:</label></td>
-                                <td><input class="form form-control" type="text" name="nombre" value="<?php echo $datos_pelicula[1]; ?>"> </td>
+                                <td><label>Titulo:</label></td><!--Los label son los nombres de los campos -->
+                                <td><input class="form form-control" type="text" name="nombre" value="<?php echo $datos_pelicula[1]; ?>"> </td> <!--Los input son los campos a editar -->
                             </tr>
                             <tr>
                                 <td><label>Fecha:</label></td>
@@ -53,7 +57,7 @@
                                     <input class="form form-control" type="text" name="duracion" value="<?php echo $datos_pelicula[3]; ?>">
                                 </td>
                             </tr>
-                            <tr>
+                            <tr> <!--Botones -->
                                 <td>
                                     <button type="submit" name="btn_editar" class='btn btn-dark' style='background-color:DodgerBlue;color:white;'value='Editar'>Guardar</button>
                                 </td>

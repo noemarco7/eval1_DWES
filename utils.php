@@ -57,9 +57,6 @@
 
 
 
-
-
-
     //Una función que obtenga los actores de una película
     //Función para que lea el csv de directores.csv
     function getActor() {
