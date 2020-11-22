@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 
 <head>
@@ -17,11 +18,11 @@
     </div>
     <div class="container">
         <?php
-        //Verificamos si existe un mensaje para el usuario...
-        //if (isset($_SESSION['mensaje'])) {
-            #mostramos el mensaje...
-        //    echo '<div class="alert alert-success" role="alert">' . $_SESSION['mensaje'] . '</div>';
-       // }
+        //Verificamos si existe un mensaje para el usuario
+        if (isset($_SESSION['mensaje'])) {
+            //mostramos el mensaje
+            echo '<div class="alert alert-success" role="alert">' . $_SESSION['mensaje'] . '</div>';
+        }
         ?>
         <div class="row mx-auto">
                     <div class="row mx-auto">
@@ -45,7 +46,7 @@
                                             <b><?php echo $peliculas[$key][1]; ?></b><br>
                                             <a href="<?php echo 'peliculas_form.php?id=' . $peliculas[$key][0]; ?>" class='btn btn-dark' style='background-color:DodgerBlue;color:white;'value='Editar'>Editar</a>
                                             <a href="<?php echo 'function_borrar.php?id=' . $peliculas[$key][0]; ?>" class='btn btn-dark' style='background-color:rgb(255,0,0);color:white;' value='Borrar'>Borrar</a>
-                                            
+                                           <!-- <a href="<?php //echo 'function_eliminar.php?id=' . $post; ?>" class='btn btn-dark' style='background-color:rgb(255,0,0);color:white;' value='Borrar'>Borrar</a>--> 
                                             <a href="<?php echo 'actores_ficha.php?id=' . $peliculas[$key][0]; ?>" class='btn btn-dark' style='background-color:DodgerBlue;color:white; value='Actores'>Actores</a>
                                             <a href="<?php echo 'directores_ficha.php?id=' . $peliculas[$key][0]; ?>" class='btn btn-dark' style='background-color:DodgerBlue;color:white; value='Director'>Director</a>
                                         </center>
@@ -54,11 +55,11 @@
                                 }
                             }
 
-                            //Eliminamos los mensaje al usuario...
-                          //  if (isset($_SESSION['mensaje'])) {
-                                #Destruimos la variable de session...
-                           //     unset($_SESSION['mensaje']);
-                         //   }
+                            //Eliminamos los mensaje al usuario
+                            if (isset($_SESSION['mensaje'])) {
+                                //Destruimos la variable de session
+                                unset($_SESSION['mensaje']);
+                            }
                                
                             ?>
                         </div>

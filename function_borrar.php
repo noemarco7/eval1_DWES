@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php //session_start(); ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,10 +16,10 @@
             <?php
 
             //Se verifica si existe un mensaje para el usuario
-          if (isset($_SESSION['mensaje'])) {
+        //  if (isset($_SESSION['mensaje'])) {
                 //Se muestra el mensaje por pantalla
-                echo '<div class="alert alert-success" role="alert">' . $_SESSION['mensaje'] . '</div>';
-            }
+        //        echo '<div class="alert alert-success" role="alert">' . $_SESSION['mensaje'] . '</div>';
+         //   }
            //Inicializamos la sesion para mostrar mensajes 
             session_start();
             //Buscamos el archivo para obtener la pelicula
@@ -76,11 +76,11 @@
 
                 //Retrocedemos a la vista peliculas con mensaje
                 $_SESSION['mensaje'] = "Se ha eliminado la pelicula " . $datos_pelicula[1];
-                header("Location: ../eval1_DWES/peliculas_borrado.php");
+                header("Location: peliculas_borrado.php");
 
             
             } else {
-                header("Location: ./eval1_DWES/peliculas.php");
+                header("Location: peliculas.php");
             }
 
             ?>

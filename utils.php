@@ -13,7 +13,11 @@
         }
         //cerrar el archivo
         fclose($file);
-        return $array_pelicula;
+        if (isset($array_pelicula)) {
+            return $array_pelicula;
+        }else{
+            echo "No hay peliculas para mostrar...";
+        }
     }
 
 
