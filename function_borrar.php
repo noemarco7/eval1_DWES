@@ -1,9 +1,9 @@
-<?php session_start();?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
      <!-- Bootstrap CSS -->
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -16,7 +16,7 @@
             <?php
 
             //Se verifica si existe un mensaje para el usuario
-            if (isset($_SESSION['mensaje'])) {
+          if (isset($_SESSION['mensaje'])) {
                 //Se muestra el mensaje por pantalla
                 echo '<div class="alert alert-success" role="alert">' . $_SESSION['mensaje'] . '</div>';
             }
@@ -38,14 +38,14 @@
                 $aux = array();
 
             // Abrimos el archivo
-                $file = 'bbdd/peliculas.csv';
+                $file = './bbdd/peliculas.csv';
                 $borrar = $datos_pelicula[0] . "," . $datos_pelicula[1] . "," . $datos_pelicula[2] . "," . $datos_pelicula[3] . "," . $datos_pelicula[4];
-                $file = file_get_contents('bbdd/peliculas.csv');
+                $file = file_get_contents('./bbdd/peliculas.csv');
                 $new_linea = trim("");
                 $resultado = str_replace($borrar, $new_linea, $file);
 
                 //Abrimos el archivo en modo escritura
-                $file = fopen("bbdd/peliculas.csv", "w");
+                $file = fopen("./bbdd/peliculas.csv", "w");
 
                 //Reescribimos el archivo con los nuevos datos
                 fwrite($file, $resultado);
@@ -53,7 +53,7 @@
                 //Cerramos el archvo
                 fclose($file);
                 
-                $handle = fopen("bbdd/peliculas.csv", "r");
+                $handle = fopen("./bbdd/peliculas.csv", "r");
                 if ($handle) {
                     $text = "";
                     while (!feof($handle)) {
@@ -66,7 +66,7 @@
                 fclose($handle);
                 
                 //Abrimos el archivo en modo escritura
-                $file = fopen("bbdd/peliculas.csv", "w");
+                $file = fopen("./bbdd/peliculas.csv", "w");
 
                 //Reescribimos el archivo con los nuevos datos
                 fwrite($file, $text);
@@ -76,11 +76,11 @@
 
                 //Retrocedemos a la vista peliculas con mensaje
                 $_SESSION['mensaje'] = "Se ha eliminado la pelicula " . $datos_pelicula[1];
-                header("Location: peliculas_borrado.php");
+                header("Location: ../eval1_DWES/peliculas_borrado.php");
 
             
             } else {
-                header("Location: peliculas.php");
+                header("Location: ./eval1_DWES/peliculas.php");
             }
 
             ?>
