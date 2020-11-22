@@ -27,21 +27,58 @@
    //Función lista actores
    function lista_actores($id_pelicula) {
      //Ruta para abrir el fichero
-    $file = fopen('./bbdd/pelicula_actor.csv', 'r');
-    //contador
-    $cont = 1;
-    //mientras
-    while (($line = fgetcsv($file)) !== FALSE) {
-        //$line is an array of the csv elements
-        if($line[0] == $id_pelicula){
-            $array_actores[$cont] = $line;
-        $cont++;
+        $file = fopen('./bbdd/pelicula_actor.csv', 'r');
+        //contador
+        $cont = 1;
+        //mientras
+        while (($line = fgetcsv($file)) !== FALSE) {
+            //$line is an array of the csv elements
+            if($line[0] == $id_pelicula){
+                $array_actores[$cont] = $line;
+            $cont++;
+            }
         }
+        //cerrar el archivo
+        fclose($file);
+        return $array_actores;
     }
-    //cerrar el archivo
-    fclose($file);
-    return $array_actores;
-}
+
+
+
+    //Función lista actores
+   function lista_director($id_pelicula) {
+     //Ruta para abrir el fichero
+        $file = fopen('./bbdd/pelicula_director.csv', 'r');
+        //contador
+        $cont = 1;
+        //mientras
+        while (($line = fgetcsv($file)) !== FALSE) {
+            //$line is an array of the csv elements
+            if($line[0] == $id_pelicula){
+                $array_director[$cont] = $line;
+            $cont++;
+            }
+        }
+        //cerrar el archivo
+        fclose($file);
+        return $array_director;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

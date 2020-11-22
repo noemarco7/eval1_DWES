@@ -19,12 +19,12 @@
        <!-- INCLUIR CÓDIGO PHP -->
         <?php
             require_once 'utils.php';
-
+                //IMFORMACIÓN ADICIONAL IMPRIMO LOS ARRAYS 
                 $peliculas = getPeliculas();
                 echo '<p><b>Array de peliculas:</b></p>';
                 print_r($peliculas);
                 echo '<br>';
-            /*    
+             
                 $director = getDirector();
                 echo '<p><b>Array de Directores:</b></p>';
                 print_r($director);
@@ -43,7 +43,7 @@
                 $pelidirector = get_pelidirector();
                 echo '<p><b>Array de pelicula_actor:</b></p>';
                 print_r($pelidirector); 
-            */
+        
         ?>
         
         
