@@ -1,0 +1,6 @@
+Título: Toy Story, Año: 1990, Duración:68
+Título: Pocahontas, Año: 1991, Duración:64
+Título: Mulan, Año: 1996, Duración:75
+Título: Anastasia, Año: 1998, Duración:62
+Título: El interrogante, Año: 2020, Duración:49
+Título: La sed, Año: 1998, Duración:89
