@@ -29,8 +29,6 @@ if (isset($_GET['id']) && $_GET['id'] != "") {
 
     
     fwrite($file, $resultado);
-
-.
     fclose($file);
     
     $handle = fopen("bbdd/peliculas.csv", "r");
